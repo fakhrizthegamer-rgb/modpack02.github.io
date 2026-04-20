@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modpack FakhrizMC</title>
+<style>
+  body {
+  background: rgb(20, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  padding: 20px;
+
+  box-shadow: inset 0 0 80px rgba(255, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+}
+
+.card {
+  background: rgb(43, 0, 0);
+  padding: 15px;
+  margin: 15px auto;
+  border-radius: 12px;
+  max-width: 400px;
+
+  border: 1px solid rgba(255, 46, 46, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+}
+
+.hot {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
+.btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgb(255, 46, 46);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: rgb(204, 0, 0);
+  box-shadow: 0 0 22px rgba(255, 0, 0, 0.9);
+  transform: scale(1.03);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+button {
+  background: red;
+  color: white;
+  padding: 8px 12px;
+  margin: 3px;
+  border: none;
+  border-radius: 6px;
+}
+button:hover {
+  transform: scale(1.05);
+}
+</style>
+</head>
+<script>
+function searchModpack() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.getElementsByClassName("card");
+
+  for (let i = 0; i < cards.length; i++) {
+
+    let text = cards[i].innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+<body>
+
+<h1>📦 Modpack</h1>
+
+<div style="text-align:center; margin-bottom:15px;">
+  <button onclick="filterCategory('all')">All</button>
+  <button onclick="filterCategory('addon')">Addon</button>
+  <button onclick="filterCategory('map')">Map</button>
+  <button onclick="filterCategory('shader')">Shader</button>
+  <button onclick="filterCategory('texture')">Texture</button>
+</div>
+<script>
+function filterCategory(cat) {
+  let cards = document.getElementsByClassName("card");
+
+  for (let i = 0; i < cards.length; i++) {
+
+    if (cat === "all") {
+      cards[i].style.display = "block";
+    } 
+    else if (cards[i].classList.contains(cat)) {
+      cards[i].style.display = "block";
+    } 
+    else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+<input type="text" id="searchInput" placeholder="Cari modpack..." onkeyup="searchModpack()" style="
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+">
+<p style="opacity:0.6;">Loading modpack list...</p>
+
+<div class="card map">
+  <h2>One Block 1.26.10+</h2>
+  <p>v1.6.3 Tiny Takeover</p>
+  <a class="btn" href="https://www.mediafire.com/file/y8h59z9i159alp2/One_Block_%2528Tiny_Takeover%2521%2529_v-1.6.3_by_DtA_MC%2521.mcworld/file">
+    ⬇️ Download
+  </a>
+</div>
+
+<div class="card addon">
+  <h2>Minemote 1.21-1.26+</h2>
+  <p>v0.6.0</p>
+  <a class="btn" href="https://www.mediafire.com/file/a6zwxiyxumgqw5n/MineMote_ByFakhrizz.mcaddon/file">
+    ⬇️ Download
+  </a>
+</div>
+
+<div class="card addon">
+  <h2>Morphing Bracelet 1.21-1.26+</h2>
+  <p>Unknown</p>
+  <a class="btn" href="https://www.mediafire.com/file/biifzum2rqfqzmf/Morphing_Bracelet_By.Fakhrizz.mcaddon/file">
+    ⬇️ Download
+  </a>
+</div>
+
+<div class="card addon">
+  <h2>One Way Ghost Blocks 1.26+</h2>
+  <p>Unknown</p>
+  <a class="btn" href="https://www.mediafire.com/file/qu1fmuwcv1fus09/One-Way_Ghost_Blocks.mcaddon/file">
+    ⬇️ Download
+  </a>
+</div>
+
+<div class="card shader">
+  <h2>RG Shader v3.5.8</h2>
+  <p>Shader | Work di MCPE ORI</p>
+  <a class="btn" href="https://www.mediafire.com/file/herp5346uvq5ozq/RG+SHADER+v.3.5.8.mcpack/file">
+    ⬇️ Download
+  </a>
+</div>
+
+<div class="card addon">
+  <h2>Ultimate Cheat Menu</h2>
+  <p>Achievement ON | Guide di source</p>
+  <a class="btn" href="https://www.mediafire.com/file/nz9r1f58vnzjv91/Ultimate_Cheat_Menu_v1.1.2+By.Fakhrizz.mcpack/file">
+    ⬇️ Download
+  </a>
+  </div>
+  
+  <div class="card addon">
+  <h2>Low Fire</h2>
+  <p>Texture pack - mengurangi efek api</p>
+  <a class="btn" href="https://www.curseforge.com/minecraft-bedrock/texture-packs/low-fire"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Animated XP Bars</h2>
+  <p>Texture pack - XP bar animasi</p>
+  <a class="btn" href="https://mcpedl.com/animated-xp-bars"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Java Addon v9</h2>
+  <p>Addon Java-style + credits pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/aba4qwuhukcmj4d/Java_Addon_V9.mcaddon.zip/file"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Luxury Cars Add-On</h2>
+  <p>Addon kendaraan mobil mewah</p>
+  <a class="btn" href="https://www.mediafire.com/file/iz1m5w698brumge/Luxury_Cars_Add-On_%2528addon%2529.mcaddon/file"> ⬇ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Human Era Series</h2>
+  <p>Texture pack villager + action & stuff support</p>
+  <a class="btn" href="https://www.mediafire.com/file/p8ec3maxnq8kyvn/HumanEraVillagersIllagers[2.5][Bedrock].mcpack/file"> ⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Easter Egg Rename A&S</h2>
+  <p>Texture pack rename + easter effect</p>
+  <a class="btn" href="https://www.mediafire.com/file/sielf40rxoauw8p/EasterEggsRename.mcpack/file"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>World Builder 1.6.1</h2>
+  <p>Addon building tools</p>
+  <a class="btn" href="https://www.mediafire.com/file/wc6juhfzgs5thwn/world+builder+1.6.1+Add-on+(addon)"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Night Vision</h2>
+  <p>Addon night vision effect</p>
+  <a class="btn" href="https://www.mediafire.com/file/dz3ufxekd79ycyj/Night_Vision.mcpack/file"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>NPA v0.6.6</h2>
+  <p>Addon utilities pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/7yzhheg8l0w8mye/NPA_V0.6.6%25281%2529.mcpack/file"> ⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Glowing Player Outline</h2>
+  <p>Addon player outline glow effect</p>
+  <a class="btn" href="https://www.curseforge.com/minecraft-bedrock/addons/glowing-player-outline"> ⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Hide Player Armor</h2>
+  <p>Texture pack hide armor visual</p>
+  <a class="btn" href="https://www.mediafire.com/file/uhhxaqn9jcjysxt/Hide+Player+Skin+v1.0.0.mcpack/file"> ⬇️ Download</a>
+</div>
+
+<div class="card shader">
+  <h2>OSRD V1.2 Render Dragon</h2>
+  <p>Shader pack - visual enhancement</p>
+  <a class="btn" href="https://www.mediafire.com/file/lv96fzpcr499lmg/OSRD_V1.2_Render_Dragon.zip/file">⬇️ Download</a>
+</div>
+
+<div class="card shader">
+  <h2>Dreamy Vibrant Visual Pack</h2>
+  <p>Shader visual pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/ifpr911af8d73hh/Dreamy_Vibrant_Visual_Pack.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card shader">
+  <h2>BSL X Shader</h2>
+  <p>Improved shader - performance + lighting</p>
+  <a class="btn" href="https://www.mediafire.com/file/k1pvhhzisr79wfo/BSL-X-shader-improvement(THE-END-UPDATE).mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card shader">
+  <h2>Newb X Dawn</h2>
+  <p>Shader reimagined version</p>
+  <a class="btn" href="https://www.mediafire.com/file/8waxoecku63aim5/Newb_X_Dawn_REIMAGINED_-_Android.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Medieval Structures</h2>
+  <p>Addon struktur medieval</p>
+  <a class="btn" href="https://www.mediafire.com/file/fn6sh2zrbyno7fb/Medieval_Structures_%2528addon%2529_%255Bby_trotamundos872%255D.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card shader">
+  <h2>Luminous Dreams</h2>
+  <p>Shader - lighting cinematic</p>
+  <a class="btn" href="https://www.mediafire.com/file/cguxiuensu3vkq5/Luminous_Dreams_v1.0_%2528resources%2529_%255Bby_Poggy%255D-%255BDeni%255D.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Dark Fantasy Visuals</h2>
+  <p>Visual fantasy pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/ezknqzy38c0lha5/Dark+Fantasy+Visuals.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Ancxliy Pack V6</h2>
+  <p>Texture pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/i1y9p4wdemkpu5c/Ancxliy_Pack_V6.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Patrix 128x</h2>
+  <p>High resolution texture pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/i9qhm2b6j9mjrxq/Patrix_128x_v1.0.12.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>HUD Reworked v1.7</h2>
+  <p>UI improvement pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/x3w9o5n1ytgqy2n/HUD%252B_Reworked_v1.7.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Enhanced Boss Bars</h2>
+  <p>Boss bar UI improvement</p>
+  <a class="btn" href="https://www.mediafire.com/file/p3q0m0mvgx6m7yv/Enhanced_Boss_Bars.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Bedrock Reimagined</h2>
+  <p>Addon gameplay overhaul</p>
+  <a class="btn" href="https://www.mediafire.com/file/o84qc1v41cypkgk/Bedrock_Reimagined_%255Bby_5FrameStudios%255D.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Ruins Structure 1.4.2</h2>
+  <p>Structure addon - adventure world</p>
+  <a class="btn" href="https://www.mediafire.com/file/1oq351b7qqw8bsa/Ruins_Structure_v1.4.2_%2528Achievement_Friendly%2529_%255Bby_HungkaioZ%255D-Deni46sty.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Dynamic Paintings</h2>
+  <p>Animated painting addon</p>
+  <a class="btn" href="https://www.mediafire.com/file/8vej96y6fh53vpt/Dynamic_Paintings_1.3.6_%2528Achievement_Friendly%2529_%255Bby_GST378%255D-Deni46sty.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Full Grass</h2>
+  <p>Better grass texture</p>
+  <a class="btn" href="https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-better-grass">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>White Outline Selection+</h2>
+  <p>UI selection highlight</p>
+  <a class="btn" href="https://www.curseforge.com/minecraft-bedrock/texture-packs/white-outline-selection">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Map Konoha</h2>
+  <p>Custom Naruto-themed map</p>
+  <a class="btn" href="https://www.mediafire.com/file/qb3n6stfnerl2f7/Map_Konoha.mcworld/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Dark Mode</h2>
+  <p>Skin pack dark UI theme</p>
+  <a class="btn" href="https://www.mediafire.com/file/pjhjkm097vrvws1/Dark_Mode_%2528skin_pack%2529.mcpack/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>SayamaCity</h2>
+  <p>Custom city world map</p>
+  <a class="btn" href="https://www.mediafire.com/file/tqozkd39tdau8js/SayamaCity-version0.3-forBedrock.zip/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Ben 10 Update</h2>
+  <p>Addon behavior + resource pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/f9zwcxu1ixi3dyu/_MConverter.eu_omni_BP.zip/file">⬇️ BP Download</a>
+  <a class="btn" href="https://www.mediafire.com/file/bno0f2stl24xe07/_MConverter.eu_omni_RP.zip/file">⬇️ RP Download</a>
+</div>
+
+<div class="card addon">
+  <h2>The Doctor Nowhere V4.10</h2>
+  <p>Horror themed addon pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/beuuj44gtbnz7fb/the_Doctor_nowhere_V4.10.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Immersive Fauna Swamp Update</h2>
+  <p>Swamp wildlife expansion addon</p>
+  <a class="btn" href="https://www.mediafire.com/file/eunejdmrwkx9e7o/Immersive+Fauna+Swamp+Update+1_2_0.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>ReplayCraft v3.1.3</h2>
+  <p>Cinematic replay tool</p>
+  <a class="btn" href="https://www.mediafire.com/file/qfyzeb5hrpr5y2t/ReplayCraft-v3.1.3.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Ultraman Ginga Victory</h2>
+  <p>Ultraman themed addon pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/zbydg3mr5wc3ocr/addon_ultraman_ginga_s_behavior_pack.mcaddon/file">⬇️ BP Download</a>
+  <a class="btn" href="https://www.mediafire.com/file/y709bjz0213m9d3/addon_ultraman_ginga_s_resource_pack.mcaddon/file">⬇️ RP Download</a>
+</div>
+
+<div class="card addon">
+  <h2>RoleFrame Undead Army</h2>
+  <p>Undead army role addon</p>
+  <a class="btn" href="https://www.mediafire.com/file/ksj1r9ertuy4ihr/roleframeUndeadArmy.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Add-on Tenda Kuliner</h2>
+  <p>Food stall addon system</p>
+  <a class="btn" href="https://drive.google.com/file/d/1Ii21P8f_lQ_pDHsOlXGD1JoX7Mm4raO8/view">⬇️ Download</a>
+</div>
+
+<div class="card addon">
+  <h2>Jubah Minecraft-MAN</h2>
+  <p>Hero costume addon</p>
+  <a class="btn" href="https://www.mediafire.com/file/osmdyorjl7xgsyl/ADD-ON+MINECRAFT-MAN.mcaddon/file">⬇️ Download</a>
+</div>
+
+<div class="card texture">
+  <h2>Refine Sounds</h2>
+  <p>Sound enhancement pack</p>
+  <a class="btn" href="https://www.mediafire.com/file/4jt9k0rmlk881p1/Refine+Sounds+v1.0.6.mcpack/file">⬇️ Download</a>
+</div>
+<br>
+<a class="btn" href="index.html">⬅️ Kembali ke Lobby</a>
+<div class="card">
+  <p>FakhrizMC Hub</p>
+</div>
